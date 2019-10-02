@@ -11,3 +11,8 @@
 """
 
 numbers = range(1,101)
+
+for item in number:
+    if item % 3 == 0:
+        print("FIZZ")
+    if
