@@ -4,9 +4,10 @@
 
 class  Calculator:
 
-    def __init__(self, a):
+
+    def __init__(self):
         self.display_hello()
-        self.num = a
+        #self.num = a
 
 
     def display_hello(self):
@@ -29,11 +30,62 @@ class  Calculator:
 
         ''',
         ]   
-    
+
+        print(self.IMAGES[0])
+
+
     def rest(self):
-        
+        number = 0
+        result = 0
+        while True:
+            number = int(input(":"))
+            if result == 0:
+                result = number
+            else:
+                result -= number
+                return result
 
 
+    def suma(self):
+        number = 0
+        result = 0
+        while True:
+            number = int(input(":"))
+            if result == 0:
+                result = number
+            else:
+                result += number
+                return result
+
+    def dividir(self):
+        number = 0
+        result = 0
+        while True:
+            number = int(input(":"))
+            if result == 0:
+                result = number
+            else:
+                result /= number
+                return result
+     
+   
+    def multi(self):
+        number = 0
+        result = 0
+        while True:
+            number = int(input(":"))
+            if result == 0:
+                result = number
+            else:
+                result *= number
+                return result
+
+
+
+
+def display_result(result):
+    print("\n")
+    print(result)
 
 
 def actions():
@@ -51,13 +103,17 @@ def actions():
 
                 """)
         if command == 'r':
-            calculator.rest()
+            resta = calculator.rest()
+            display_result(resta)
         elif command == 's':
-            calculator.suma()
+            suma = calculator.suma()
+            display_result(suma)
         elif command == 'd':
-            calculator.dividir()
+            division = calculator.dividir()
+            display_result(division)
         elif command == 'm':
-            calculator.multi()
+            multi = calculator.multi()
+            display_result(multi)
         else:
             break
 
@@ -68,6 +124,6 @@ if __name__ == '__main__':
 
 
     print("Hello, Welcome to Your Calculator Software")
-    calculator
+    actions()
 
 
