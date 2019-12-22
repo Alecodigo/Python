@@ -57,6 +57,7 @@ class  Calculator:
                 result += number
                 return result
 
+
     def dividir(self):
         number = 0
         result = 0
@@ -81,8 +82,6 @@ class  Calculator:
                 return result
 
 
-
-
 def display_result(result):
     print("\n")
     print(result)
@@ -101,7 +100,8 @@ def actions():
                 [m]ultiplicar -> press m
                 [A]ny to exit
 
-                """)
+            """)
+
         if command == 'r':
             resta = calculator.rest()
             display_result(resta)

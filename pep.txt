@@ -1,0 +1,5 @@
+PEP 8: Funciones
+
+A la definicion de una funcion la deben anteceder dos lineas en blanco.
+
+Al asignar parametros por omision, no debe dejarse espacios en blanco ni antes ni despues del signo =.
