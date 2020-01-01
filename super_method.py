@@ -1,48 +1,50 @@
-# -*- coding: utf-8  -*-
-
-class Lobo:
-	def __init__(self):
-		self.correr = 'Corriendo'
-		self.grunir = 'GR GR GR'
-		self.aullar = 'Auuu!!'
-
-	def correr(self):
-		print(self.correr)
+# -*- coding: utf-8 -*-
 
 
-	def grunir(self):
-		print(self.grunir)
-
-
-	def aullar(self):
-		print(self.aullar)
 
 
 class Perro:
-	def __init__(self):
-		self.correr = 'Corriendo'
-		self.ladrar = 'Guau Guau!'
-		self.grunir = 'GR GR GR GR'
-		self.jugar = 'El perro persigue la pelota'
+    def __init__(self, ladrar):
+        self.ladra = ladrar 
+        self.juega = "Persigue la pelota"
+        
 
-	#def correr(self):
-	#	print(self.correr)
-
-	def ladrar(self):
-		print(self.ladrar)
-
-	def grunir(self):
-		print(self.grunir)
+    def ladrar(self):
+        print(self.ladra)
 
 
+    def jugar(self):
+        print(self.juega)
 
 
-class PastorAleman(Perro, Lobo):
+    def _mover_cola(self):
+        vals = {'cola': 'Moviendo cola'}
+        return vals
 
 
-	def __init__(self):
-		super().correr()
+
+class PastorAleman(Perro):
 
 
-pastor = PastorAleman()
-pastor.correr()
+    def __init__(self, ladrar):
+        #super(PastorAleman, self).__init__(ladrar)
+        result = super().__init__(ladrar)
+        print("result es :", result)
+
+
+    def _mover(self):
+        print("Ahora a mover la cola")
+        resultado = super(PastorAleman, self)._mover_cola()
+        print('resultado es {}'.format(resultado))
+        resultado['cola'] = 'Moviendo la cola pero con modificacion'
+        print(resultado['cola'])
+
+
+#perro = Perro("Guau Guau")
+pastor = PastorAleman("Guau Guau")
+pastor.ladrar()
+pastor._mover()
+
+
+
+

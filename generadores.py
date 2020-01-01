@@ -3,7 +3,7 @@
 
 
 def generador(n, m, s):
-    while(n <=m):
+    while(n <= m):
         yield n
         n += s
 
