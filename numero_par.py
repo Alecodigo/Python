@@ -33,7 +33,7 @@ if __name__=='__main__':
     if result is True:
         print("Congratulations this number" + " " + number + " " + "is part")
     else:
-        print("Sorry this is not a number part")
+        print("Sorry this is not a even number.")
     
 
 
