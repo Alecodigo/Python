@@ -93,34 +93,5 @@ if __name__ == '__main__':
     else:
         os.makedirs(os.path.join(os.getcwd(), 'exam'))
 
-    stateCapitals = {
-            'Amazonas':'Puerto Ayacucho', 
-            'Anzoategui':'Barcelona', 
-            'Apure': 'San Fernando de Apure',
-            'Aragua': 'Maracay',
-            'Barinas': 'Barinas',
-            'Bolivar': 'Ciudad Bolivar',
-            'Carabobo': 'Valencia',
-            'Cojedes': 'San Carlos',
-            'Delta Amacuro':'Tucupita',
-            'Distrito Capital':'Caracas',
-            'Falcon':'Coro',
-            'Guarico':'San Juan de los Morros',
-            'Lara':'Barquisimeto',
-            'Merida':'Merida',
-            'Miranda':'Los Teques',
-            'Monagas':'Maturin',
-            'Nueva Esparta':'La Asuncion',
-            'Portuguesa':'Guanare',
-            'Sucre':'Cumana',
-            'Tachira':'San Cristobal',
-            'Trujillo':'Trujillo',
-            'La Guaira':'La Guaira',
-            'Yaracuy':'San Felipe',
-            'Zulia':'Maracaibo',}
-    #pprint.pprint(stateCapitals)
-    #print(stateCapitals)
-
-    # Empezamos a contruir los archivos
     makeTest()
     makeQuestions()
